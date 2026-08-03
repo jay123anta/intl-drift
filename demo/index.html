@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>intl-drift — your browser vs Node, live</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: ui-monospace, Consolas, monospace; margin: 2rem auto;
+         max-width: 60rem; padding: 0 1rem; line-height: 1.45; }
+  h1 { font-size: 1.3rem; } h1 code { background: none; }
+  button { font: inherit; padding: .5rem 1rem; cursor: pointer; }
+  table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+  th, td { border: 1px solid #8884; padding: .3rem .5rem; text-align: left;
+           font-size: .85rem; vertical-align: top; }
+  th { background: #8881; }
+  .old { color: #b91c1c; } .new { color: #15803d; }
+  .inv { background: #fde68a; color: #92400e; border-radius: 3px;
+         padding: 0 .15em; font-size: .8em; }
+  @media (prefers-color-scheme: dark) {
+    .old { color: #f87171; } .new { color: #4ade80; }
+    .inv { background: #78350f; color: #fde68a; }
+  }
+  #env, #status { margin: .75rem 0; font-size: .9rem; }
+  .muted { opacity: .65; }
+</style>
+</head>
+<body>
+<h1><code>intl-drift</code> — your browser vs Node, computed right now</h1>
+<p class="muted">Runs the same zero-dependency probe that runs under Node,
+in this tab, and diffs the results client-side against a published Node
+snapshot. Nothing is uploaded; there is no server.</p>
+
+<p>
+  <button id="run">Run probe in this browser</button>
+  <label style="margin-left:1rem">Node snapshot:
+    <input type="file" id="file" accept=".json">
+  </label>
+  <span class="muted">(auto-loads <code>node-baseline.json</code> if served
+  alongside this page)</span>
+</p>
+<p><label>Filter rows: <input type="text" id="filter"
+  placeholder="e.g. uk-UA or curUAH" size="24"></label></p>
+<div id="env"></div>
+<div id="status"></div>
+<div id="out"></div>
+
+<script src="../probe.cjs"></script>
+<script>
+(function () {
+  'use strict';
+  var probe = window.intlDriftProbe;
+  var baseline = null;
+  var mine = null;
+
+  function esc(s) {
+    var out = '', i, c, ch;
+    for (i = 0; i < s.length; i++) {
+      c = s.charCodeAt(i);
+      ch = s.charAt(i);
+      var invisible = c < 32 || c === 127 || (c >= 128 && c <= 160)
+        || c === 0x061c || c === 0x1680 || c === 0x180e
+        || (c >= 0x2000 && c <= 0x200f)
+        || (c >= 0x2028 && c <= 0x202f) || (c >= 0x205f && c <= 0x206f)
+        || c === 0x3000 || c === 0xfeff;
+      if (invisible) {
+        out += '<span class="inv">U+'
+          + ('0000' + c.toString(16).toUpperCase()).slice(-4) + '</span>';
+      } else {
+        out += ch.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+      }
+    }
+    return out;
+  }
+
+  function leaf(v) {
+    return typeof v === 'string'
+      || (v && typeof v === 'object' && (v.unsupported || v.threw));
+  }
+
+  function walk(a, b, path, out) {
+    if (typeof a === 'undefined' || typeof b === 'undefined'
+        || leaf(a) || leaf(b)) {
+      if (typeof a === 'string' && typeof b === 'string' && a !== b) {
+        out.push({ path: path, a: a, b: b });
+      }
+      return;
+    }
+    var keys = {}, k, list = [];
+    for (k in a) { keys[k] = 1; }
+    for (k in b) { keys[k] = 1; }
+    for (k in keys) { list.push(k); }
+    list.sort();
+    for (var i = 0; i < list.length; i++) {
+      walk(a[list[i]], b[list[i]], path ? path + '.' + list[i] : list[i], out);
+    }
+  }
+
+  function envLine(snap, label) {
+    var e = snap.env || {}, r = e.runtime || {}, v = e.versions || {};
+    function s(x) { return (x && x.unavailable) ? '(' + x.unavailable + ')' : x; }
+    return '<b>' + label + '</b>: ' + (r.name || '?') + ' ' + (s(r.version) || '')
+      + ' · icu ' + s(v.icu) + ' · cldr ' + s(v.cldr)
+      + ' · ' + (e.icuVariant || '?') + '-icu'
+      + (r.userAgent ? ' · <span class="muted">' + r.userAgent + '</span>' : '');
+  }
+
+  function render() {
+    if (!mine || !baseline) { return; }
+    if (mine.matrix.digest !== baseline.matrix.digest) {
+      document.getElementById('status').textContent =
+        'MATRIX MISMATCH — snapshots are not comparable (digests '
+        + baseline.matrix.digest + ' vs ' + mine.matrix.digest + ').';
+      return;
+    }
+    document.getElementById('env').innerHTML =
+      envLine(baseline, 'baseline') + '<br>' + envLine(mine, 'this browser');
+    var changes = [];
+    var keys = {}, k, locs = [];
+    for (k in baseline.results) { keys[k] = 1; }
+    for (k in mine.results) { keys[k] = 1; }
+    for (k in keys) { locs.push(k); }
+    locs.sort();
+    for (var i = 0; i < locs.length; i++) {
+      var out = [];
+      walk(baseline.results[locs[i]], mine.results[locs[i]], '', out);
+      for (var j = 0; j < out.length; j++) {
+        changes.push({ locale: locs[i], path: out[j].path,
+                       a: out[j].a, b: out[j].b });
+      }
+    }
+    var q = document.getElementById('filter').value.toLowerCase();
+    var shown = changes;
+    if (q) {
+      shown = [];
+      for (var f = 0; f < changes.length; f++) {
+        if ((changes[f].locale + ' ' + changes[f].path)
+            .toLowerCase().indexOf(q) !== -1) {
+          shown.push(changes[f]);
+        }
+      }
+    }
+    document.getElementById('status').innerHTML = changes.length
+      ? '<b>' + changes.length + ' outputs differ</b> between the Node baseline '
+        + 'and this browser, right now'
+        + (q ? ' (' + shown.length + ' match the filter)' : '')
+        + '. Each row is text your server and your users disagree about:'
+      : 'No differences — this browser matches the Node baseline exactly.';
+    var html = ['<table><tr><th>locale</th><th>probe</th>'
+      + '<th>node says</th><th>this browser says</th></tr>'];
+    var cap = Math.min(shown.length, 400);
+    for (var n = 0; n < cap; n++) {
+      var c = shown[n];
+      html.push('<tr><td>' + c.locale + '</td><td>' + c.path
+        + '</td><td class="old">' + esc(c.a)
+        + '</td><td class="new">' + esc(c.b) + '</td></tr>');
+    }
+    html.push('</table>');
+    if (shown.length > cap) {
+      html.push('<p class="muted">…and ' + (shown.length - cap)
+        + ' more.</p>');
+    }
+    document.getElementById('out').innerHTML = html.join('');
+  }
+
+  document.getElementById('filter').oninput = render;
+
+  document.getElementById('run').onclick = function () {
+    document.getElementById('status').textContent = 'probing…';
+    setTimeout(function () {
+      mine = probe.run();
+      document.getElementById('status').textContent = 'probe done.';
+      render();
+    }, 10);
+  };
+
+  document.getElementById('file').onchange = function (ev) {
+    var f = ev.target.files[0];
+    if (!f) { return; }
+    var rd = new FileReader();
+    rd.onload = function () {
+      baseline = JSON.parse(rd.result);
+      document.getElementById('status').textContent =
+        'baseline loaded (' + f.name + ').';
+      render();
+    };
+    rd.readAsText(f);
+  };
+
+  /* auto-load a served baseline if present */
+  if (window.fetch) {
+    fetch('node-baseline.json').then(function (r) {
+      return r.ok ? r.json() : null;
+    }).then(function (j) {
+      if (j && !baseline) {
+        baseline = j;
+        document.getElementById('status').textContent =
+          'baseline auto-loaded (node-baseline.json).';
+        render();
+      }
+    })['catch'](function () { /* fine — use the file picker */ });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+name: intl-drift check
+description: >-
+  Fail CI when this runtime's Intl/ICU/CLDR formatting output drifts from the
+  committed baseline snapshot.
+branding:
+  icon: globe
+  color: orange
+
+inputs:
+  baseline:
+    description: Path to the committed baseline snapshot
+    required: false
+    default: .intl-drift/baseline.json
+  locales:
+    description: Comma-separated app locales for coverage reporting (optional)
+    required: false
+    default: ''
+  allow-env-mismatch:
+    description: Compare across small-icu/full-icu builds anyway (not recommended)
+    required: false
+    default: 'false'
+  json:
+    description: Emit the machine-readable JSON report instead of the table
+    required: false
+    default: 'false'
+
+runs:
+  using: composite
+  steps:
+    - name: intl-drift check
+      shell: bash
+      run: |
+        ARGS=(check --baseline "${{ inputs.baseline }}")
+        if [ -n "${{ inputs.locales }}" ]; then
+          ARGS+=(--locales "${{ inputs.locales }}")
+        fi
+        if [ "${{ inputs.allow-env-mismatch }}" = "true" ]; then
+          ARGS+=(--allow-env-mismatch)
+        fi
+        if [ "${{ inputs.json }}" = "true" ]; then
+          ARGS+=(--json)
+        fi
+        node "${{ github.action_path }}/intl-drift.cjs" "${ARGS[@]}"

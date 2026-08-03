@@ -1,0 +1,23 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [18, 20, 22, 24]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      # Determinism proof on every supported runtime (design 3.5)
+      - run: node probe.cjs --selftest
+      # Full suite: serialization invariants, incident regressions against
+      # the frozen snapshots in phase0/ and phase1/, CLI exit-code contract
+      - run: node test.cjs

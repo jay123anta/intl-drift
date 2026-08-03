@@ -1,0 +1,46 @@
+name: Reference snapshots
+# Regenerates refs/node-<major>.json (design 1.6: Node-only reference
+# snapshots — browser references are deliberately NOT published, because a
+# stale browser reference produces false drift reports).
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 1 * *' # monthly; Node LTS lines move slowly
+
+jobs:
+  snapshot:
+    strategy:
+      matrix:
+        node: [18, 20, 22, 24]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: node intl-drift.cjs probe --out refs/node-${{ matrix.node }}.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: node-${{ matrix.node }}-snapshot
+          path: refs/node-${{ matrix.node }}.json
+
+  # Snapshots are byte-deterministic, so a no-change month produces an empty
+  # diff and no PR. A changed snapshot means the Node distro itself moved
+  # ICU/CLDR inside a release line — exactly the event worth a commit.
+  propose:
+    needs: snapshot
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+          path: refs/
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          title: 'refs: regenerate Node reference snapshots'
+          commit-message: 'refs: regenerate Node reference snapshots'
+          branch: refs/regenerate
+          body: >-
+            Automated regeneration. A non-empty diff here means a Node release
+            line changed its ICU/CLDR data — review the drift before merging.

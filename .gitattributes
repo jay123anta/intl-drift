@@ -1,0 +1,4 @@
+# Snapshots are canonical: pure ASCII, LF-only, byte-deterministic.
+# CRLF conversion on checkout would break byte-identity and the LF test —
+# force LF for everything, on every platform.
+* text=auto eol=lf

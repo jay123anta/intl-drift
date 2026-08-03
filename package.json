@@ -1,0 +1,47 @@
+{
+  "name": "intl-drift",
+  "version": "0.1.0",
+  "description": "Golden-file drift detection for Intl/ICU/CLDR output. Catch silent formatting changes across Node upgrades and between your server and your users' browsers.",
+  "license": "MIT",
+  "author": "Jayanta Kumar Nath",
+  "bin": {
+    "intl-drift": "./intl-drift.cjs"
+  },
+  "main": "./index.cjs",
+  "files": [
+    "index.cjs",
+    "intl-drift.cjs",
+    "diff.cjs",
+    "probe.cjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://github.com/jay123anta/intl-drift#readme",
+  "bugs": {
+    "url": "https://github.com/jay123anta/intl-drift/issues"
+  },
+  "scripts": {
+    "test": "node test.cjs",
+    "selftest": "node probe.cjs --selftest"
+  },
+  "engines": {
+    "node": ">=14.14"
+  },
+  "keywords": [
+    "intl",
+    "icu",
+    "cldr",
+    "i18n",
+    "locale",
+    "drift",
+    "snapshot",
+    "golden-file",
+    "DateTimeFormat",
+    "NumberFormat",
+    "ci"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jay123anta/intl-drift"
+  }
+}

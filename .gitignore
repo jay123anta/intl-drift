@@ -1,0 +1,17 @@
+# local dev baseline — each machine/runtime makes its own
+.intl-drift/
+
+# internal planning/research documents — not part of the published project
+CONCEPT.md
+PLAN.md
+RESEARCH.md
+
+# raw development runs (reports, ladder diffs, full snapshot sets);
+# the snapshots the test suite needs are committed under fixtures/
+# (anchored to the root — fixtures/phase0/ must NOT match)
+/phase0/
+/phase1/
+
+node_modules/
+*.tgz
+*.log
