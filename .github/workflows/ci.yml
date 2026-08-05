@@ -5,12 +5,28 @@ on:
   workflow_dispatch:
 
 jobs:
+  # Ask nodejs.org which LTS-line majors (>= 18, even) currently exist, so a
+  # new Node major joins the matrix automatically — no April/October edits.
+  versions:
+    runs-on: ubuntu-latest
+    outputs:
+      majors: ${{ steps.list.outputs.majors }}
+    steps:
+      - id: list
+        run: |
+          MAJORS=$(curl -fsSL https://nodejs.org/dist/index.json \
+            | jq -c '[.[].version[1:] | split(".")[0] | tonumber]
+                     | unique | map(select(. >= 18 and . % 2 == 0)) | sort')
+          echo "majors=$MAJORS" >> "$GITHUB_OUTPUT"
+          echo "testing Node majors: $MAJORS"
+
   test:
+    needs: versions
     strategy:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        node: [18, 20, 22, 24]
+        node: ${{ fromJSON(needs.versions.outputs.majors) }}
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v5
@@ -20,5 +36,5 @@ jobs:
       # Determinism proof on every supported runtime (design 3.5)
       - run: node probe.cjs --selftest
       # Full suite: serialization invariants, incident regressions against
-      # the frozen snapshots in phase0/ and phase1/, CLI exit-code contract
+      # the frozen snapshots in fixtures/, CLI exit-code contract
       - run: node test.cjs
