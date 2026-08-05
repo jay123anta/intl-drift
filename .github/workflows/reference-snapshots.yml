@@ -14,8 +14,8 @@ jobs:
         node: [18, 20, 22, 24]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node }}
       - run: node intl-drift.cjs probe --out refs/node-${{ matrix.node }}.json
@@ -31,7 +31,7 @@ jobs:
     needs: snapshot
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/download-artifact@v4
         with:
           merge-multiple: true
