@@ -1,14 +1,17 @@
 name: Release
 # Push a version tag and this publishes to npm + creates the GitHub Release:
 #   git tag v0.2.0 && git push origin v0.2.0
-# One-time setup: create an npm Granular Access Token (packages: read/write,
-# scoped to intl-drift) and store it as the repo secret NPM_TOKEN.
+# Publishing uses npm Trusted Publishing (OIDC): no token, no secret, no
+# expiry, and the account's strict 2FA stays untouched. One-time setup on
+# npmjs.com: package intl-drift -> Settings -> Trusted Publisher -> GitHub
+# Actions -> owner jay123anta, repo intl-drift, workflow release.yml.
 on:
   push:
     tags: ['v[0-9]*']
 
 permissions:
   contents: write # create the GitHub Release
+  id-token: write # OIDC for npm Trusted Publishing + provenance
 
 jobs:
   publish:
@@ -33,9 +36,9 @@ jobs:
             exit 1
           fi
 
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # OIDC publishing needs a current npm CLI (runner's default may lag).
+      - run: npm install -g npm@latest
+      - run: npm publish --provenance --access public
 
       - uses: softprops/action-gh-release@v2
         with:
