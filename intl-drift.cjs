@@ -105,7 +105,7 @@ switch (cmd) {
     } else {
       process.stdout.write(text);
     }
-    process.exit(0);
+    process.exitCode = 0; break;
   }
 
   case 'selftest': {
@@ -113,37 +113,37 @@ switch (cmd) {
     var a2 = probe.serialize(probeNow());
     if (a1 === a2) {
       console.error('selftest OK: two runs byte-identical (' + a1.length + ' bytes)');
-      process.exit(0);
+      process.exitCode = 0; break;
     }
     console.error('selftest FAILED: runs differ');
-    process.exit(1);
+    process.exitCode = 1; break;
   }
 
   case 'diff': {
     if (flags.positional.length !== 2) { usage(64); }
     var sA = readSnapshot(flags.positional[0], 'baseline');
     var sB = readSnapshot(flags.positional[1], 'current');
-    if (!sA || !sB) { process.exit(2); }
+    if (!sA || !sB) { process.exitCode = 2; break; }
     var rd = diffMod.runDiff(sA, sB, {
       labelA: flags.positional[0], labelB: flags.positional[1],
       allowEnv: flags.allowEnv, verbose: flags.verbose,
       json: flags.json, appLocales: flags.appLocales
     });
-    process.exit(rd.code);
+    process.exitCode = rd.code; break;
   }
 
   case 'init': {
     if (fs.existsSync(baselinePath) && !flags.force) {
       console.error('baseline already exists at ' + baselinePath
         + ' — use "intl-drift accept" for intentional updates, or --force');
-      process.exit(64);
+      process.exitCode = 64; break;
     }
     var s0 = probeNow();
     writeBaseline(s0);
     console.log('baseline written: ' + baselinePath);
     console.log('  ' + diffMod.envLine(s0) + ' · matrix '
       + s0.matrix.id + '@' + s0.matrix.version);
-    process.exit(0);
+    process.exitCode = 0; break;
   }
 
   case 'check': {
@@ -158,10 +158,10 @@ switch (cmd) {
     if (!fs.existsSync(baselinePath)) {
       console.error('no baseline at ' + baselinePath + ' — run: intl-drift init');
       jsonError('baseline-missing: ' + baselinePath);
-      process.exit(2);
+      process.exitCode = 2; break;
     }
     var base = readSnapshot(baselinePath, 'baseline');
-    if (!base) { jsonError('baseline-unreadable: ' + baselinePath); process.exit(2); }
+    if (!base) { jsonError('baseline-unreadable: ' + baselinePath); process.exitCode = 2; break; }
     var cur = probeNow();
     var rc = diffMod.runDiff(base, cur, {
       labelA: baselinePath, labelB: 'this runtime',
@@ -173,7 +173,7 @@ switch (cmd) {
         + '  If this runtime change is intentional:  intl-drift accept');
       console.log('');
     }
-    process.exit(rc.code);
+    process.exitCode = rc.code; break;
   }
 
   case 'accept': {
@@ -182,10 +182,10 @@ switch (cmd) {
          machine happens to produce must not become a first-run habit. */
       console.error('no baseline at ' + baselinePath
         + ' — accept never creates baselines; run: intl-drift init');
-      process.exit(2);
+      process.exitCode = 2; break;
     }
     var old = readSnapshot(baselinePath, 'baseline');
-    if (!old) { process.exit(2); }
+    if (!old) { process.exitCode = 2; break; }
     var now = probeNow();
 
     /* Refuse full->small downgrades (design 4.4): accepting a small-icu
@@ -196,7 +196,7 @@ switch (cmd) {
       console.error('refusing to accept: baseline is full-icu, this runtime is'
         + ' small-icu.\nAccepting would permanently bake in degraded coverage.'
         + ' Use --force to override.');
-      process.exit(3);
+      process.exitCode = 3; break;
     }
 
     if (old.matrix.digest !== now.matrix.digest) {
@@ -208,7 +208,7 @@ switch (cmd) {
         + now.matrix.version + ' (' + now.matrix.digest + ')');
       console.log('baseline rewritten: ' + baselinePath
         + ' (change counts unavailable across matrix versions)');
-      process.exit(0);
+      process.exitCode = 0; break;
     }
 
     var ra = diffMod.runDiff(old, now, {
@@ -221,7 +221,7 @@ switch (cmd) {
       + ' locale' + (ra.localesChanged === 1 ? '' : 's')
       + '; baseline now: ' + diffMod.envLine(now));
     console.log('');
-    process.exit(0);
+    process.exitCode = 0; break;
   }
 
   default:

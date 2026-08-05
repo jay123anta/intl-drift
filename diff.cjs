@@ -546,5 +546,9 @@ if (require.main === module) {
   var r = runDiff(snapA, snapB,
     { labelA: files[0], labelB: files[1], allowEnv: allowEnv,
       verbose: verbose, json: jsonMode, appLocales: appLocales });
-  process.exit(r.code);
+  /* Never process.exit() after large stdout writes: on Linux, writes past
+     the 64KB pipe buffer are async and exit() discards the unflushed tail
+     (this bit us as Windows-pass/Linux-flake in CI). exitCode + natural
+     exit flushes everything. */
+  process.exitCode = r.code;
 }
