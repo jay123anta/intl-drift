@@ -15,3 +15,6 @@ RESEARCH.md
 node_modules/
 *.tgz
 *.log
+
+# launch materials (private)
+LAUNCH.md
