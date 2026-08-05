@@ -1,5 +1,10 @@
 # intl-drift
 
+[![CI](https://github.com/jay123anta/intl-drift/actions/workflows/ci.yml/badge.svg)](https://github.com/jay123anta/intl-drift/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/intl-drift)](https://www.npmjs.com/package/intl-drift)
+[![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](package.json)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 > **Your code didn't change. Your dates and currencies did.**
 
 `Intl` formatting is powered by locale data (CLDR) and an implementation
