@@ -45,6 +45,11 @@ jobs:
   propose:
     needs: snapshot
     runs-on: ubuntu-latest
+    # The repo's default workflow token is read-only (good); this job alone
+    # needs to push the refs branch and open the PR.
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v5
       - uses: actions/download-artifact@v4
