@@ -4,7 +4,7 @@
     "defaultTimeZone": "UTC",
     "engine": {
       "name": "v8",
-      "version": "12.4.254.21-node.56"
+      "version": "14.6.202.34-node.28"
     },
     "icuVariant": "full",
     "icuVariantBasis": "fr resolves to fr, January formats as janvier",
@@ -14,7 +14,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": "22.23.1"
+      "version": "26.7.0"
     },
     "supportedValues": {
       "calendar": [
@@ -765,8 +765,8 @@
     },
     "versions": {
       "cldr": "48.0",
-      "icu": "78.2",
-      "tz": "2026a",
+      "icu": "78.3",
+      "tz": "2026c",
       "unicode": "17.0"
     }
   },
@@ -2220,8 +2220,8 @@
         "NumberFormat.signAlways": "locale=ar-EG;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=arab;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=ar-EG;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=arab;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=ar-EG;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=arab;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=ar;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=ar;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=ar;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=ar;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=ar-EG;numberingSystem=arab;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=ar-EG;numberingSystem=arab;numeric=auto;style=long"
       }
@@ -2804,8 +2804,8 @@
         "NumberFormat.signAlways": "locale=cy-GB;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=cy-GB;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=cy-GB;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=cy;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=cy;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=cy;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=cy;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=cy-GB;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=cy-GB;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -3388,8 +3388,8 @@
         "NumberFormat.signAlways": "locale=de-CH;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=de-CH;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=de-CH;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=de;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=de;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=de;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=de;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=de-CH;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=de-CH;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -3972,8 +3972,8 @@
         "NumberFormat.signAlways": "locale=de-DE;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=de-DE;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=de-DE;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=de;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=de;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=de;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=de;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=de-DE;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=de-DE;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -4556,8 +4556,8 @@
         "NumberFormat.signAlways": "locale=en-AU;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=en-AU;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=en-AU;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=en-AU;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=en-AU;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -5140,8 +5140,8 @@
         "NumberFormat.signAlways": "locale=en-GB;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=en-GB;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=en-GB;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=en-GB;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=en-GB;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -5724,8 +5724,8 @@
         "NumberFormat.signAlways": "locale=en-IN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=en-IN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=en-IN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=en-IN;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=en-IN;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -6308,8 +6308,8 @@
         "NumberFormat.signAlways": "locale=en-US;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=en-US;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=en-US;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=en;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=en-US;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=en-US;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -6892,8 +6892,8 @@
         "NumberFormat.signAlways": "locale=es-ES;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=es-ES;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=es-ES;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=es;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=es;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=es;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=es;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=es-ES;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=es-ES;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -7476,8 +7476,8 @@
         "NumberFormat.signAlways": "locale=es-MX;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=es-MX;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=es-MX;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=es;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=es;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=es;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=es;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=es-MX;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=es-MX;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -8060,8 +8060,8 @@
         "NumberFormat.signAlways": "locale=fa-IR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=arabext;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=fa-IR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=arabext;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=fa-IR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=arabext;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=fa;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=fa;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=fa;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=fa;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=fa-IR;numberingSystem=arabext;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=fa-IR;numberingSystem=arabext;numeric=auto;style=long"
       }
@@ -8644,8 +8644,8 @@
         "NumberFormat.signAlways": "locale=fr-CA;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=fr-CA;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=fr-CA;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=fr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=fr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=fr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=fr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=fr-CA;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=fr-CA;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -9228,8 +9228,8 @@
         "NumberFormat.signAlways": "locale=fr-FR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=fr-FR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=fr-FR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=fr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=fr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=fr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=fr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=fr-FR;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=fr-FR;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -9812,8 +9812,8 @@
         "NumberFormat.signAlways": "locale=he-IL;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=he-IL;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=he-IL;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=he;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=he;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=he;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=he;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=he-IL;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=he-IL;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -10396,8 +10396,8 @@
         "NumberFormat.signAlways": "locale=hi-IN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=hi-IN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=hi-IN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=hi;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=hi;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=hi;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=hi;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=hi-IN;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=hi-IN;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -10989,8 +10989,8 @@
         "NumberFormat.signAlways": "locale=ja-JP;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=ja-JP;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=ja-JP;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=ja;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=ja;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=ja;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=ja;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=ja-JP;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=ja-JP;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -11035,10 +11035,10 @@
           "winterPM": "AD 2024\ub144"
         },
         "hm12": {
-          "epoch": "AM 12:00",
-          "summerAM": "AM 4:05",
-          "winterPM": "PM 1:45",
-          "yearEnd": "PM 11:59"
+          "epoch": "\uc624\uc804 12:00",
+          "summerAM": "\uc624\uc804 4:05",
+          "winterPM": "\uc624\ud6c4 1:45",
+          "yearEnd": "\uc624\ud6c4 11:59"
         },
         "mdShort": {
           "bc": "3\uc6d4 15\uc77c",
@@ -11049,38 +11049,38 @@
           "yearEnd": "12\uc6d4 31\uc77c"
         },
         "medShort": {
-          "bc": "101. 3. 15. PM 12:00",
-          "epoch": "1970. 1. 1. AM 12:00",
-          "reiwa": "2019. 5. 1. AM 12:00",
-          "summerAM": "2023. 7. 9. AM 4:05",
-          "winterPM": "2024. 1. 15. PM 1:45",
-          "yearEnd": "2020. 12. 31. PM 11:59"
+          "bc": "101. 3. 15. \uc624\ud6c4 12:00",
+          "epoch": "1970. 1. 1. \uc624\uc804 12:00",
+          "reiwa": "2019. 5. 1. \uc624\uc804 12:00",
+          "summerAM": "2023. 7. 9. \uc624\uc804 4:05",
+          "winterPM": "2024. 1. 15. \uc624\ud6c4 1:45",
+          "yearEnd": "2020. 12. 31. \uc624\ud6c4 11:59"
         },
         "range": {
           "epoch..winterPM": "1970. 1. 1. ~ 2024. 1. 15.",
           "summerAM..yearEnd": "2023. 7. 9. ~ 2020. 12. 31."
         },
         "timeLong": {
-          "epoch": "AM 12\uc2dc 0\ubd84 0\ucd08 UTC",
-          "summerAM": "AM 4\uc2dc 5\ubd84 6\ucd08 UTC",
-          "winterPM": "PM 1\uc2dc 45\ubd84 30\ucd08 UTC",
-          "yearEnd": "PM 11\uc2dc 59\ubd84 59\ucd08 UTC"
+          "epoch": "\uc624\uc804 12\uc2dc 0\ubd84 0\ucd08 UTC",
+          "summerAM": "\uc624\uc804 4\uc2dc 5\ubd84 6\ucd08 UTC",
+          "winterPM": "\uc624\ud6c4 1\uc2dc 45\ubd84 30\ucd08 UTC",
+          "yearEnd": "\uc624\ud6c4 11\uc2dc 59\ubd84 59\ucd08 UTC"
         },
         "timeMedium": {
-          "epoch": "AM 12:00:00",
-          "summerAM": "AM 4:05:06",
-          "winterPM": "PM 1:45:30",
-          "yearEnd": "PM 11:59:59"
+          "epoch": "\uc624\uc804 12:00:00",
+          "summerAM": "\uc624\uc804 4:05:06",
+          "winterPM": "\uc624\ud6c4 1:45:30",
+          "yearEnd": "\uc624\ud6c4 11:59:59"
         },
         "timeShort": {
-          "epoch": "AM 12:00",
-          "summerAM": "AM 4:05",
-          "winterPM": "PM 1:45",
-          "yearEnd": "PM 11:59"
+          "epoch": "\uc624\uc804 12:00",
+          "summerAM": "\uc624\uc804 4:05",
+          "winterPM": "\uc624\ud6c4 1:45",
+          "yearEnd": "\uc624\ud6c4 11:59"
         },
         "tzLong": {
-          "summerAM": "2023\ub144 7\uc6d4 9\uc77c AM 4:05 \ud611\uc815 \uc138\uacc4\uc2dc",
-          "winterPM": "2024\ub144 1\uc6d4 15\uc77c PM 1:45 \ud611\uc815 \uc138\uacc4\uc2dc"
+          "summerAM": "2023\ub144 7\uc6d4 9\uc77c \uc624\uc804 4:05 \ud611\uc815 \uc138\uacc4\uc2dc",
+          "winterPM": "2024\ub144 1\uc6d4 15\uc77c \uc624\ud6c4 1:45 \ud611\uc815 \uc138\uacc4\uc2dc"
         },
         "weekday": {
           "bc": "\ubaa9\uc694\uc77c",
@@ -11573,8 +11573,8 @@
         "NumberFormat.signAlways": "locale=ko-KR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=ko-KR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=ko-KR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=ko;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=ko;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=ko;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=ko;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=ko-KR;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=ko-KR;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -12157,8 +12157,8 @@
         "NumberFormat.signAlways": "locale=pl-PL;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=pl-PL;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=pl-PL;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=pl;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=pl;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=pl;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=pl;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=pl-PL;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=pl-PL;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -12741,8 +12741,8 @@
         "NumberFormat.signAlways": "locale=pt-BR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=pt-BR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=pt-BR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=pt;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=pt;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=pt;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=pt;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=pt-BR;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=pt-BR;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -12809,8 +12809,8 @@
           "yearEnd": "31 \u0434\u0435\u043a. 2020 \u0433., 23:59"
         },
         "range": {
-          "epoch..winterPM": "1 \u044f\u043d\u0432. 1970\u202f\u0433. \u2013 15 \u044f\u043d\u0432. 2024\u202f\u0433.",
-          "summerAM..yearEnd": "9 \u0438\u044e\u043b. 2023\u202f\u0433. \u2013 31 \u0434\u0435\u043a. 2020\u202f\u0433."
+          "epoch..winterPM": "1 \u044f\u043d\u0432. 1970 \u0433. \u2013 15 \u044f\u043d\u0432. 2024 \u0433.",
+          "summerAM..yearEnd": "9 \u0438\u044e\u043b. 2023 \u0433. \u2013 31 \u0434\u0435\u043a. 2020 \u0433."
         },
         "timeLong": {
           "epoch": "00:00:00 UTC",
@@ -13325,8 +13325,8 @@
         "NumberFormat.signAlways": "locale=ru-RU;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=ru-RU;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=ru-RU;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=ru;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=ru;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=ru;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=ru;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=ru-RU;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=ru-RU;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -13909,8 +13909,8 @@
         "NumberFormat.signAlways": "locale=sv-SE;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=sv-SE;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=sv-SE;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=sv;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=sv;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=sv;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=sv;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=sv-SE;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=sv-SE;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -14502,8 +14502,8 @@
         "NumberFormat.signAlways": "locale=th-TH;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=th-TH;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=th-TH;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=th;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=th;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=th;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=th;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=th-TH;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=th-TH;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -15086,8 +15086,8 @@
         "NumberFormat.signAlways": "locale=tr-TR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=tr-TR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=tr-TR;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=tr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=tr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=tr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=tr;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=tr-TR;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=tr-TR;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -15154,8 +15154,8 @@
           "yearEnd": "31 \u0433\u0440\u0443\u0434. 2020 \u0440., 23:59"
         },
         "range": {
-          "epoch..winterPM": "1 \u0441\u0456\u0447. 1970 \u2013 15 \u0441\u0456\u0447. 2024\u202f\u0440\u0440.",
-          "summerAM..yearEnd": "9 \u043b\u0438\u043f. 2023 \u2013 31 \u0433\u0440\u0443\u0434. 2020\u202f\u0440\u0440."
+          "epoch..winterPM": "1 \u0441\u0456\u0447. 1970 \u2013 15 \u0441\u0456\u0447. 2024 \u0440\u0440.",
+          "summerAM..yearEnd": "9 \u043b\u0438\u043f. 2023 \u2013 31 \u0433\u0440\u0443\u0434. 2020 \u0440\u0440."
         },
         "timeLong": {
           "epoch": "00:00:00 UTC",
@@ -15670,8 +15670,8 @@
         "NumberFormat.signAlways": "locale=uk-UA;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=uk-UA;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=uk-UA;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=uk;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=uk;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=uk;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=uk;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=uk-UA;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=uk-UA;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -16254,8 +16254,8 @@
         "NumberFormat.signAlways": "locale=vi-VN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=vi-VN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=vi-VN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=vi;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=vi;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=vi;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=vi;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=vi-VN;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=vi-VN;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -16795,7 +16795,7 @@
         "order": "21,19,20,0,2,1,3,4,5,6,7,8,10,9,11,12,13,14,15,16,17,18"
       },
       "resolvedOptions": {
-        "Collator": "caseFirst=false;collation=default;ignorePunctuation=false;locale=zh-Hans-CN;numeric=false;sensitivity=variant;usage=sort",
+        "Collator": "caseFirst=false;collation=pinyin;ignorePunctuation=false;locale=zh-Hans-CN;numeric=false;sensitivity=variant;usage=sort",
         "DateTimeFormat.dateFull": "calendar=gregory;dateStyle=full;locale=zh-Hans-CN;numberingSystem=latn;timeZone=UTC",
         "DateTimeFormat.dateLong": "calendar=gregory;dateStyle=long;locale=zh-Hans-CN;numberingSystem=latn;timeZone=UTC",
         "DateTimeFormat.dateMedium": "calendar=gregory;dateStyle=medium;locale=zh-Hans-CN;numberingSystem=latn;timeZone=UTC",
@@ -16838,8 +16838,8 @@
         "NumberFormat.signAlways": "locale=zh-Hans-CN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=zh-Hans-CN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=zh-Hans-CN;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=zh;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=zh;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=zh;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=zh;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=zh-Hans-CN;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=zh-Hans-CN;numberingSystem=latn;numeric=auto;style=long"
       }
@@ -17379,7 +17379,7 @@
         "order": "21,19,20,0,2,1,3,4,5,6,7,8,10,9,11,12,13,14,15,16,17,18"
       },
       "resolvedOptions": {
-        "Collator": "caseFirst=false;collation=default;ignorePunctuation=false;locale=zh-Hant-TW;numeric=false;sensitivity=variant;usage=sort",
+        "Collator": "caseFirst=false;collation=stroke;ignorePunctuation=false;locale=zh-Hant-TW;numeric=false;sensitivity=variant;usage=sort",
         "DateTimeFormat.dateFull": "calendar=gregory;dateStyle=full;locale=zh-Hant-TW;numberingSystem=latn;timeZone=UTC",
         "DateTimeFormat.dateLong": "calendar=gregory;dateStyle=long;locale=zh-Hant-TW;numberingSystem=latn;timeZone=UTC",
         "DateTimeFormat.dateMedium": "calendar=gregory;dateStyle=medium;locale=zh-Hant-TW;numberingSystem=latn;timeZone=UTC",
@@ -17422,8 +17422,8 @@
         "NumberFormat.signAlways": "locale=zh-Hant-TW;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=always;style=decimal;trailingZeroDisplay=auto;useGrouping=auto",
         "NumberFormat.unitByte": "locale=zh-Hant-TW;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=byte;unitDisplay=narrow;useGrouping=auto",
         "NumberFormat.unitKmh": "locale=zh-Hant-TW;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;numberingSystem=latn;roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;signDisplay=auto;style=unit;trailingZeroDisplay=auto;unit=kilometer-per-hour;unitDisplay=long;useGrouping=auto",
-        "PluralRules.cardinal": "locale=zh;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
-        "PluralRules.ordinal": "locale=zh;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
+        "PluralRules.cardinal": "locale=zh;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=cardinal",
+        "PluralRules.ordinal": "locale=zh;maximumFractionDigits=3;minimumFractionDigits=0;minimumIntegerDigits=1;notation=standard;pluralCategories=[object];roundingIncrement=1;roundingMode=halfExpand;roundingPriority=auto;trailingZeroDisplay=auto;type=ordinal",
         "RelativeTimeFormat.always": "locale=zh-Hant-TW;numberingSystem=latn;numeric=always;style=long",
         "RelativeTimeFormat.auto": "locale=zh-Hant-TW;numberingSystem=latn;numeric=auto;style=long"
       }
