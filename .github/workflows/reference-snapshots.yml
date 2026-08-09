@@ -60,21 +60,23 @@ jobs:
         with:
           title: 'refs: regenerate Node reference snapshots'
           commit-message: 'refs: regenerate Node reference snapshots'
-          branch: refs/regenerate
+          # NOT "refs/..." — that collides with git's reserved ref namespace
+          # (refs/heads/refs/... resolves ambiguously and git exits 1)
+          branch: bot/regenerate-refs
           body: >-
             Automated regeneration. A non-empty diff here means a Node release
             line changed its ICU/CLDR data — review the drift before merging
             (tip: run `node intl-drift.cjs diff` on the old vs new file).
 
   # GitHub disables cron workflows after ~60 days without repo activity;
-  # quiet months here are by design, so keep the schedules alive via API
-  # (no dummy commits).
+  # quiet months here are by design. Re-enabling an already-enabled workflow
+  # is a no-op, so this direct API call keeps the schedule alive without
+  # dummy commits or third-party actions.
   keepalive:
     runs-on: ubuntu-latest
     permissions:
       actions: write
     steps:
-      - uses: actions/checkout@v5
-      - uses: gautamkrishnar/keepalive-workflow@v2
-        with:
-          use_api: true
+      - run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/reference-snapshots.yml/enable"
+        env:
+          GH_TOKEN: ${{ github.token }}
