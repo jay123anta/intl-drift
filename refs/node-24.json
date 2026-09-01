@@ -4,7 +4,7 @@
     "defaultTimeZone": "UTC",
     "engine": {
       "name": "v8",
-      "version": "13.6.233.17-node.50"
+      "version": "13.6.233.17-node.51"
     },
     "icuVariant": "full",
     "icuVariantBasis": "fr resolves to fr, January formats as janvier",
@@ -14,7 +14,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": "24.18.0"
+      "version": "24.19.0"
     },
     "supportedValues": {
       "calendar": [
