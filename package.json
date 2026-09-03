@@ -1,6 +1,6 @@
 {
   "name": "intl-drift",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Golden-file drift detection for Intl/ICU/CLDR output. Catch silent formatting changes across Node upgrades and between your server and your users' browsers.",
   "license": "MIT",
   "author": "Jayanta Kumar Nath",

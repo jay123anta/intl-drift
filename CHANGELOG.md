@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.1 — 2026-08-29
+
+Documentation and discovery only — no behaviour changes; existing
+baselines remain fully comparable (matrix unchanged, `core@1`).
+
+- README: live browser demo linked above the fold; new "When CI goes red"
+  section describing the accept workflow; figures re-verified on the
+  current runtime (probe timing corrected to ~300 ms; the Chrome-vs-Node
+  count now carries its measurement date); blink-dev incident thread
+  linked.
+- package.json: added `internationalization`, `formatting`,
+  `snapshot-testing` keywords for npm search.
+
 ## 0.1.0 — 2026-08-05
 
 First release.

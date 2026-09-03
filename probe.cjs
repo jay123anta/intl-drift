@@ -17,7 +17,7 @@
 (function (global) {
   'use strict';
 
-  var TOOL = { name: 'intl-drift', version: '0.1.0' };
+  var TOOL = { name: 'intl-drift', version: '0.1.1' };
   var FORMAT_VERSION = 1;
 
   /* ================= canonical serialization (design 3.4) ================ */
