@@ -1,0 +1,23 @@
+name: Sync release notes
+# Copies RELEASE_NOTES.md from the repo into the body of an existing GitHub
+# Release. Run it from the Actions tab after editing the notes file — turns
+# "open release, paste, save" into one click, for this and future releases.
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag whose notes to replace
+        required: true
+        default: v0.1.0
+
+permissions:
+  contents: write # editing a release requires contents scope
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: gh release edit "${{ inputs.tag }}" --notes-file RELEASE_NOTES.md
+        env:
+          GH_TOKEN: ${{ github.token }}
