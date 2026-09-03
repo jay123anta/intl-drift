@@ -15,8 +15,13 @@ test fails until it's too late, and the diff is often an invisible Unicode
 character.
 
 `intl-drift` snapshots what your runtime actually formats — ~12,000 outputs
-across 27 locales, in about 250 ms — and tells you exactly what changed, the
+across 27 locales, in about 300 ms — and tells you exactly what changed, the
 moment it changes.
+
+**See it on your own machine first**: open the
+[live demo](https://jay123anta.github.io/intl-drift/demo/) and it will diff
+**your browser** against a Node snapshot, right now — client-side, nothing
+uploaded.
 
 ```console
 $ npx intl-drift init     # once: snapshot this runtime, commit the file
@@ -31,7 +36,7 @@ $ npx intl-drift accept   # after an intentional upgrade: re-baseline
 | fr-CA currency `123,45 $` → `123,45 $ CA` | Node 14.16 → 14.17 — a **minor** release ([nodejs#38897](https://github.com/nodejs/node/issues/38897)) | ICU 67 → 68 |
 | ru USD `$9` → `US$ 9` | Node 7 → 8 ([nodejs#15223](https://github.com/nodejs/node/issues/15223)) | not Russian data at all — the small-icu *fallback locale* changed |
 | uk-UA hryvnia: `₴` on your server, `грн` in your users' Chrome | live **today** ([nodejs#58870](https://github.com/nodejs/node/issues/58870)) | vendor divergence — upstream CLDR still says `₴` |
-| en-GB/AU/IN full dates gained a comma | Chromium's ICU 77 upgrade (blink-dev) | actually ICU 75 → 76 — two Node 22 **LTS patch releases** apart |
+| en-GB/AU/IN full dates gained a comma | Chromium's ICU 77 upgrade ([blink-dev](https://groups.google.com/a/chromium.org/g/blink-dev/c/zzN7erylAc4)) | actually ICU 75 → 76 — two Node 22 **LTS patch releases** apart |
 | de-CH `12.2021` → `12/2021`, broke Next.js SSR hydration | reported as Node 24.13.0 → 24.13.1 ([nodejs#61861](https://github.com/nodejs/node/issues/61861)) | actually ICU 68 → 72 |
 
 Notice the last column. In three of five incidents, **the bug report names the
@@ -89,6 +94,19 @@ Three things to notice:
   message strings, that's a wrong sentence in production, and nothing else
   in your stack will ever mention it.
 
+## When CI goes red
+
+Read the grouped report top-down: the Resolution section explains *why*,
+the rule lines compress the *what*, and anything left over is worth reading
+line by line. Then decide: cosmetic (an invisible space, a resolved-options
+field) or user-visible (a currency symbol, a plural form) — fix your code
+if the change is unwanted, or run `intl-drift accept` if the new runtime is
+here to stay. `accept` re-probes the current runtime, prints how many
+changes it is accepting across how many locales (put that line in your
+commit message), and overwrites the committed baseline. It refuses to
+*create* a baseline (that's `init`) and refuses to downgrade a full-icu
+baseline to a small-icu runtime unless you `--force` it.
+
 ## Your server vs your users' browsers
 
 The probe is a single zero-dependency ES5 file. It runs unmodified on
@@ -97,10 +115,11 @@ Node 7+, Deno (experimental), and in a plain `<script>` tag. So
 diffs it against a Node snapshot entirely client-side — no server, nothing
 uploaded.
 
-Chrome vs Node 22, today: **467 outputs differ.** Among them: the hryvnia
-symbol, `12 million` vs `1.2 crore` for en-IN compact numbers, and an entire
-locale — Welsh — that Chrome silently serves in English while Node renders it
-fully.
+Chrome vs Node 22, as measured August 2026 (Chrome 150 vs Node 22.16 —
+run the demo for today's number): **467 outputs differ.** Among them: the
+hryvnia symbol, `12 million` vs `1.2 crore` for en-IN compact numbers, and an
+entire locale — Welsh — that Chrome silently serves in English while Node
+renders it fully.
 
 ## Even identical data versions drift
 
