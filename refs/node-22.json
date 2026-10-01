@@ -4,7 +4,7 @@
     "defaultTimeZone": "UTC",
     "engine": {
       "name": "v8",
-      "version": "12.4.254.21-node.56"
+      "version": "12.4.254.21-node.57"
     },
     "icuVariant": "full",
     "icuVariantBasis": "fr resolves to fr, January formats as janvier",
@@ -14,7 +14,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": "22.23.2"
+      "version": "22.23.3"
     },
     "supportedValues": {
       "calendar": [
@@ -765,8 +765,8 @@
     },
     "versions": {
       "cldr": "48.0",
-      "icu": "78.2",
-      "tz": "2026a",
+      "icu": "78.3",
+      "tz": "2026c",
       "unicode": "17.0"
     }
   },
@@ -11035,10 +11035,10 @@
           "winterPM": "AD 2024\ub144"
         },
         "hm12": {
-          "epoch": "AM 12:00",
-          "summerAM": "AM 4:05",
-          "winterPM": "PM 1:45",
-          "yearEnd": "PM 11:59"
+          "epoch": "\uc624\uc804 12:00",
+          "summerAM": "\uc624\uc804 4:05",
+          "winterPM": "\uc624\ud6c4 1:45",
+          "yearEnd": "\uc624\ud6c4 11:59"
         },
         "mdShort": {
           "bc": "3\uc6d4 15\uc77c",
@@ -11049,38 +11049,38 @@
           "yearEnd": "12\uc6d4 31\uc77c"
         },
         "medShort": {
-          "bc": "101. 3. 15. PM 12:00",
-          "epoch": "1970. 1. 1. AM 12:00",
-          "reiwa": "2019. 5. 1. AM 12:00",
-          "summerAM": "2023. 7. 9. AM 4:05",
-          "winterPM": "2024. 1. 15. PM 1:45",
-          "yearEnd": "2020. 12. 31. PM 11:59"
+          "bc": "101. 3. 15. \uc624\ud6c4 12:00",
+          "epoch": "1970. 1. 1. \uc624\uc804 12:00",
+          "reiwa": "2019. 5. 1. \uc624\uc804 12:00",
+          "summerAM": "2023. 7. 9. \uc624\uc804 4:05",
+          "winterPM": "2024. 1. 15. \uc624\ud6c4 1:45",
+          "yearEnd": "2020. 12. 31. \uc624\ud6c4 11:59"
         },
         "range": {
           "epoch..winterPM": "1970. 1. 1. ~ 2024. 1. 15.",
           "summerAM..yearEnd": "2023. 7. 9. ~ 2020. 12. 31."
         },
         "timeLong": {
-          "epoch": "AM 12\uc2dc 0\ubd84 0\ucd08 UTC",
-          "summerAM": "AM 4\uc2dc 5\ubd84 6\ucd08 UTC",
-          "winterPM": "PM 1\uc2dc 45\ubd84 30\ucd08 UTC",
-          "yearEnd": "PM 11\uc2dc 59\ubd84 59\ucd08 UTC"
+          "epoch": "\uc624\uc804 12\uc2dc 0\ubd84 0\ucd08 UTC",
+          "summerAM": "\uc624\uc804 4\uc2dc 5\ubd84 6\ucd08 UTC",
+          "winterPM": "\uc624\ud6c4 1\uc2dc 45\ubd84 30\ucd08 UTC",
+          "yearEnd": "\uc624\ud6c4 11\uc2dc 59\ubd84 59\ucd08 UTC"
         },
         "timeMedium": {
-          "epoch": "AM 12:00:00",
-          "summerAM": "AM 4:05:06",
-          "winterPM": "PM 1:45:30",
-          "yearEnd": "PM 11:59:59"
+          "epoch": "\uc624\uc804 12:00:00",
+          "summerAM": "\uc624\uc804 4:05:06",
+          "winterPM": "\uc624\ud6c4 1:45:30",
+          "yearEnd": "\uc624\ud6c4 11:59:59"
         },
         "timeShort": {
-          "epoch": "AM 12:00",
-          "summerAM": "AM 4:05",
-          "winterPM": "PM 1:45",
-          "yearEnd": "PM 11:59"
+          "epoch": "\uc624\uc804 12:00",
+          "summerAM": "\uc624\uc804 4:05",
+          "winterPM": "\uc624\ud6c4 1:45",
+          "yearEnd": "\uc624\ud6c4 11:59"
         },
         "tzLong": {
-          "summerAM": "2023\ub144 7\uc6d4 9\uc77c AM 4:05 \ud611\uc815 \uc138\uacc4\uc2dc",
-          "winterPM": "2024\ub144 1\uc6d4 15\uc77c PM 1:45 \ud611\uc815 \uc138\uacc4\uc2dc"
+          "summerAM": "2023\ub144 7\uc6d4 9\uc77c \uc624\uc804 4:05 \ud611\uc815 \uc138\uacc4\uc2dc",
+          "winterPM": "2024\ub144 1\uc6d4 15\uc77c \uc624\ud6c4 1:45 \ud611\uc815 \uc138\uacc4\uc2dc"
         },
         "weekday": {
           "bc": "\ubaa9\uc694\uc77c",
@@ -17431,6 +17431,6 @@
   },
   "tool": {
     "name": "intl-drift",
-    "version": "0.1.0"
+    "version": "0.1.1"
   }
 }

@@ -4,7 +4,7 @@
     "defaultTimeZone": "UTC",
     "engine": {
       "name": "v8",
-      "version": "13.6.233.17-node.51"
+      "version": "13.6.233.17-node.53"
     },
     "icuVariant": "full",
     "icuVariantBasis": "fr resolves to fr, January formats as janvier",
@@ -14,7 +14,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": "24.19.0"
+      "version": "24.21.0"
     },
     "supportedValues": {
       "calendar": [
@@ -766,7 +766,7 @@
     "versions": {
       "cldr": "48.0",
       "icu": "78.3",
-      "tz": "2026b",
+      "tz": "2026c",
       "unicode": "17.0"
     }
   },
@@ -17431,6 +17431,6 @@
   },
   "tool": {
     "name": "intl-drift",
-    "version": "0.1.0"
+    "version": "0.1.1"
   }
 }

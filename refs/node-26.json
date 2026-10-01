@@ -4,7 +4,7 @@
     "defaultTimeZone": "UTC",
     "engine": {
       "name": "v8",
-      "version": "14.6.202.34-node.28"
+      "version": "14.6.202.34-node.34"
     },
     "icuVariant": "full",
     "icuVariantBasis": "fr resolves to fr, January formats as janvier",
@@ -14,7 +14,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": "26.8.1"
+      "version": "26.10.0"
     },
     "supportedValues": {
       "calendar": [
@@ -17431,6 +17431,6 @@
   },
   "tool": {
     "name": "intl-drift",
-    "version": "0.1.0"
+    "version": "0.1.1"
   }
 }
