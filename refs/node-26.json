@@ -4,7 +4,7 @@
     "defaultTimeZone": "UTC",
     "engine": {
       "name": "v8",
-      "version": "14.6.202.34-node.34"
+      "version": "14.6.202.34-node.40"
     },
     "icuVariant": "full",
     "icuVariantBasis": "fr resolves to fr, January formats as janvier",
@@ -14,7 +14,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": "26.10.0"
+      "version": "26.13.0"
     },
     "supportedValues": {
       "calendar": [
@@ -766,7 +766,7 @@
     "versions": {
       "cldr": "48.0",
       "icu": "78.3",
-      "tz": "2026c",
+      "tz": "2026e",
       "unicode": "17.0"
     }
   },
